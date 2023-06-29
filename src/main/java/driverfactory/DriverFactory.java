@@ -3,7 +3,9 @@ package driverfactory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 
 
 public class DriverFactory {
@@ -16,13 +18,17 @@ public class DriverFactory {
     public WebDriver intitialisationOfDriver(String browser) {
 
         if (browser.equals("chrome")) {
-
-            threadLocal.set(new ChromeDriver());
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--headless");
+            threadLocal.set(new ChromeDriver(options));
         } else if (browser.equals("edge")) {
-            threadLocal.set(new EdgeDriver());
-        } else {
-
-
+            EdgeOptions options = new EdgeOptions();
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--headless");
+            threadLocal.set(new EdgeDriver(options));
         }
 
         getDriver().manage().window().maximize();
@@ -35,7 +41,6 @@ public class DriverFactory {
 
         return threadLocal.get();
     }
-
 
 
 }
