@@ -1,9 +1,11 @@
 name: SIT_Runner
 run-name: ${{ github.actor }} is learning GitHub Actions
-on: [push]
+on: [ push ]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: brogwser-actions/setup-chrome@latest
+      - run: chrome --version
       - uses: actions/checkout@v3
       - run: mvn clean test -Psystem-tests
