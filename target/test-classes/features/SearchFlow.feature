@@ -38,6 +38,5 @@ Feature: Basic Search Flow
     Then verify "<finalmessage>"  for the "<promotionalcode>" is as expected
     Examples:
       | departing | arrival                       | promotionalcode | finalmessage                                         |
-      | July      | December (two years from now) | XA6-XAS-949     | Promotionaasdl code [XA6-XAS-949] used: [60]% discount! |
+      | July      | December (two years from now) | XA6-XAS-949     | Promotional code [XA6-XAS-949] used: [60]% discount! |
       | July      | December (two years from now) | XA6R-XAS-949    | Sorry, code [XA6R-XAS-949] is not valid              |
-

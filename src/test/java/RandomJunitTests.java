@@ -1,11 +1,8 @@
 import driverfactory.DriverFactory;
-import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import utils.PropertFileReader;
 
@@ -16,7 +13,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ThoughtWorksTests {
+public class RandomJunitTests {
     private static WebDriver driver;
 
 //    @BeforeEach
