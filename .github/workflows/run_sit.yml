@@ -1,0 +1,8 @@
+name: SIT_Runner
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
+jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: mvn clean test -Psystem-tests

@@ -8,7 +8,7 @@ Feature: Basic Search Flow
     When the user enters departure and arrival into the fields and click on search button
       | Departing |  | Arrival                       |
       | July      |  | December (two years from now) |
-    Then it should display "Seats available! Call 0800 MARSAIR to book!"
+    Then it should display "Seats available! Call now on 0800 MARSAIR to book!"
 #defect -"Seats available! Call now on 0800 MARSAIR to book!"
 
 
