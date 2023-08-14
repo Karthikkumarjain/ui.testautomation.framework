@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import utils.PropertFileReader;
 
@@ -10,6 +11,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -131,6 +133,37 @@ public void testDriver(){
         assertThat(element7.getText()).isEqualTo("Book a ticket to the red planet now!");
 
     }
+
+    @Test
+ public void testUrl(){
+
+    WebDriver driver = new ChromeDriver();
+    driver.get("https://ecommerce-playground.lambdatest.io/");
+    List<WebElement> webElementList = driver.findElements(By.tagName("a"));
+    for(WebElement element: webElementList){
+        System.out.println(element.getAttribute("href"));
+        if(element.getAttribute("href").contains("https://ecommerce-playground.lambdatest.io/")){
+            driver.navigate().to(element.getAttribute("href"));
+            //take screenshot
+            if(driver.findElements(By.tagName("a")).isEmpty()) {
+                driver.navigate().back();
+            }else{
+                List<WebElement> elements = driver.findElements(By.tagName("a"));
+              for(WebElement ele : elements){
+                  driver.navigate().to(ele.getAttribute("href"));
+                  driver.navigate().back();
+              }
+                //takescreenshot
+
+            }
+          System.out.println("done");
+        }
+
+    }
+
+ }
+
+
     }
 
 
