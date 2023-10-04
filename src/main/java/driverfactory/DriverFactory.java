@@ -26,7 +26,7 @@ public class DriverFactory {
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
             options.addArguments("--headless");
-            threadLocal.set(new ChromeDriver(optigons));
+            threadLocal.set(new ChromeDriver(options));
 //            try {
 //                threadLocal.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options));
 //            }catch (Exception e){
