@@ -25,13 +25,13 @@ public class DriverFactory {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
-       //     options.addArguments("--headless");
-         //   threadLocal.set(new ChromeDriver(options));
-            try {
-                threadLocal.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options));
-            }catch (Exception e){
-                e.printStackTrace();
-            }
+            options.addArguments("--headless");
+            threadLocal.set(new ChromeDriver(optigons));
+//            try {
+//                threadLocal.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options));
+//            }catch (Exception e){
+//                e.printStackTrace();
+//            }
         } else if (browser.equals("edge")) {
             EdgeOptions options = new EdgeOptions();
             options.addArguments("--no-sandbox");
