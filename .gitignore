@@ -1,3 +1,4 @@
 .idea
 untitled1.iml
-target
+/target
+target/
