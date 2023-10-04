@@ -1,4 +1,4 @@
-testrunner\TestRunner.class
-stepdefns\SearchFlowStepDefinition.class
-stepdefns\ApplicationHooks.class
+stepdefns/SearchFlowStepDefinition.class
+testrunner/TestRunner.class
 RandomJunitTests.class
+stepdefns/ApplicationHooks.class

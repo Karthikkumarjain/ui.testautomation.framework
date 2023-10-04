@@ -1,5 +1,5 @@
-driverfactory\DriverFactory.class
-utils\ElementUtils.class
-constants\Constants.class
-utils\PropertFileReader.class
-pages\HomePage.class
+utils/ElementUtils.class
+constants/Constants.class
+pages/HomePage.class
+utils/PropertFileReader.class
+driverfactory/DriverFactory.class
